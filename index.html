@@ -99,6 +99,7 @@
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1>FortniteShopping.com</h1>
       <p>We Offer <span class="typed" data-typed-items="OG Accounts, Items, Fast Delivery and Helpful Support !"></span></p>
+	    <p> HALLOWEEN PROMOTION ENDS IN : </p><p class="demo"></p>
 
     </div>
   </section><!-- End Hero -->
@@ -1094,6 +1095,37 @@
 	function togglePopup23(){
   document.getElementById("popup-23").classList.toggle("active");
 }
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 90 * 100 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
 </script>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
