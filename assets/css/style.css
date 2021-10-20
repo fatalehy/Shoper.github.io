@@ -826,6 +826,19 @@ section {
   border-color: 0099ff;
   color: #151515;
 }
+.services .cta-btn2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 4px;
+  transition: 0.5s;
+  margin-top: 10px;
+  border: 2px solid #e60000;
+  color: #e60000;
+}
 .services .featured {
     width: 200px;
     position: absolute;
