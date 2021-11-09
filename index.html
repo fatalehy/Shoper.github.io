@@ -124,11 +124,7 @@
 	<input type="text" placeholder="Delivery E-mail adress"> </>
 		<p></p>
 	<p></p>
-                <div id="smart-button-container">
-      <div style="text-align: center;">
-        <div id="paypal-button-container"></div>
-      </div>
-    </div>
+
  <div id="smart-button-container">
       <div style="text-align: center;">
         <div id="paypal-button-container"></div>
@@ -193,8 +189,54 @@
 		
 	  <h4><sup class="description">$</sup>9,99<span></span></h4>
 	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate?hosted_button_id=UVTGMA3SZL6MA" class="cta-btn">Pay With Paypal/Credit Card</a>
+	                		<p></p>
+	<p></p>
+             <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'silver',
+          layout: 'horizontal',
+          label: 'pay',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"RENEGADE RAIDER FULL ACCESS","amount":{"currency_code":"USD","value":9.99}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
            
   </div>
 </div>
@@ -214,8 +256,54 @@
 	  <h4><sup class="description">$</sup>9,99<span></span></h4>
 	<input type="text" placeholder="Delivery E-mail adress"> </>
 	                
-                <a href="https://www.paypal.com/donate?hosted_button_id=YSNEWZVB98B9W" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+           		<p></p>
+	<p></p>
+           <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'silver',
+          layout: 'horizontal',
+          label: 'pay',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"BLACK KNIGHT FULL ACCESS","amount":{"currency_code":"USD","value":9.99}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
   </div>
 </div>
 	<div class="popup" id="popup-26">
@@ -234,8 +322,54 @@
 	  <h4><sup class="description">$</sup>9,99<span></span></h4>
 	<input type="text" placeholder="Delivery E-mail adress"> </>
 	                
-                <a href="https://www.paypal.com/donate?hosted_button_id=KQE8QJP8H73BE" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+              		<p></p>
+	<p></p>
+           <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'silver',
+          layout: 'horizontal',
+          label: 'pay',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"AERIAL ASSAULT FULL ACCESS","amount":{"currency_code":"USD","value":9.99}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
   </div>
 </div>
 	<div class="popup" id="popup-27">
@@ -254,8 +388,54 @@
 	  <h4><sup class="description">$</sup>9,99<span></span></h4>
 	<input type="text" placeholder="Delivery E-mail adress"> </>
 	                
-                <a href="https://www.paypal.com/donate?hosted_button_id=5BYU6PRUTME7N" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+                		<p></p>
+	<p></p>
+           <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'silver',
+          layout: 'horizontal',
+          label: 'pay',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"BLAZE FULL ACCESS","amount":{"currency_code":"USD","value":9.99}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
   </div>
 </div>
 <div class="popup" id="popup-23">
@@ -274,8 +454,54 @@
 	  <h4><sup class="description">$</sup>19,99<span></span></h4>
 	<input type="text" placeholder="Delivery E-mail adress"> </>
 	                
-                <a href="https://www.paypal.com/donate?hosted_button_id=JFA76XT436H5N" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+                		<p></p>
+	<p></p>
+           <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'silver',
+          layout: 'horizontal',
+          label: 'pay',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"Psycho Bundle Borderlands","amount":{"currency_code":"USD","value":19.99}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
   </div>
 </div>
 <div class="popup" id="popup-1">
@@ -294,8 +520,54 @@
 	  <h4><sup class="description">$</sup>13,99<span></span></h4>
 	<input type="text" placeholder="Delivery E-mail adress"> </>
 	                
-                <a href="https://www.paypal.com/donate?hosted_button_id=9J299M233AM96" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+                		<p></p>
+	<p></p>
+           <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'silver',
+          layout: 'horizontal',
+          label: 'pay',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"BLACK KNIGHT OG FULL ACCESS ACCOUNT","amount":{"currency_code":"USD","value":13.99}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
   </div>
 </div>
 <div class="popup" id="popup-28">
@@ -314,8 +586,54 @@
 	  <h4><sup class="description">$</sup>13,99<span></span></h4>
 	<input type="text" placeholder="Delivery E-mail adress"> </>
 	                
-                <a href="https://www.paypal.com/donate?hosted_button_id=5FNZ9C6VQECG4" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+                		<p></p>
+	<p></p>
+           <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'silver',
+          layout: 'horizontal',
+          label: 'pay',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"CATALYST OG FULL ACCESS ACCOUNT","amount":{"currency_code":"USD","value":13.99}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
   </div>
 </div>
 <div class="popup" id="popup-2">
@@ -334,8 +652,54 @@
 	  <h4><sup class="description">$</sup>13,99<span></span></h4>
 	<input type="text" placeholder="Delivery E-mail adress"> </>
 	                
-                <a href="https://www.paypal.com/donate?hosted_button_id=6UML528UR349Q" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+             		<p></p>
+	<p></p>
+           <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'silver',
+          layout: 'horizontal',
+          label: 'pay',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"RENEGADE RAIDER OG FULL ACCESS ACCOUNT","amount":{"currency_code":"USD","value":13.99}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
   </div>
 </div>
 <div class="popup" id="popup-3">
@@ -354,8 +718,54 @@
 	  <h4><sup class="description">$</sup>13,99<span></span></h4>
 	<input type="text" placeholder="Delivery E-mail adress"> </>
 	                
-                <a href="https://www.paypal.com/donate?hosted_button_id=L9GGBANLYH86Y" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+              		<p></p>
+	<p></p>
+           <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'silver',
+          layout: 'horizontal',
+          label: 'pay',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"AERIAL ASSAULT OG FULL ACCESS ACCOUNT","amount":{"currency_code":"USD","value":13.99}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
   </div>
 </div>
 <div class="popup" id="popup-4">
@@ -374,8 +784,54 @@
 	  <h4><sup class="description">$</sup>13,99<span></span></h4>
 	<input type="text" placeholder="Delivery E-mail adress"> </>
 	                
-                <a href="https://www.paypal.com/donate?hosted_button_id=TBEYWR5VZ4UNG" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+              		<p></p>
+	<p></p>
+           <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'silver',
+          layout: 'horizontal',
+          label: 'pay',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"DIRE OG FULL ACCESS ACCOUNT","amount":{"currency_code":"USD","value":13.99}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
   </div>
 </div>
 <div class="popup" id="popup-5">
@@ -394,8 +850,54 @@
 	  <h4><sup class="description">$</sup>13,99<span></span></h4>
 	<input type="text" placeholder="Delivery E-mail adress"> </>
 	                
-                <a href="https://www.paypal.com/donate?hosted_button_id=A2PGG2NTLEWCS" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+           		<p></p>
+	<p></p>
+           <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'silver',
+          layout: 'horizontal',
+          label: 'pay',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"CHOMP SR. OG FULL ACCESS ACCOUNT","amount":{"currency_code":"USD","value":13.99}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
   </div>
 </div>
 <div class="popup" id="popup-6">
@@ -434,8 +936,54 @@
 	  <h4><sup class="description">$</sup>13,99<span></span></h4>
 	<input type="text" placeholder="Delivery E-mail adress"> </>
 	                
-                <a href="https://www.paypal.com/donate?hosted_button_id=KLUMYVY26LE4C" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+              		<p></p>
+	<p></p>
+           <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'silver',
+          layout: 'horizontal',
+          label: 'pay',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"GHOUL TROOPER OG FULL ACCESS ACCOUNT","amount":{"currency_code":"USD","value":13.99}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
   </div>
 </div>
 <div class="popup" id="popup-8">
@@ -454,8 +1002,54 @@
 	  <h4><sup class="description">$</sup>13,99<span></span></h4>
 	<input type="text" placeholder="Delivery E-mail adress"> </>
 	                
-                <a href="https://www.paypal.com/donate?hosted_button_id=ZU8NVW33XH37G" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+              		<p></p>
+	<p></p>
+           <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'silver',
+          layout: 'horizontal',
+          label: 'pay',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"IKONIK OG FULL ACCESS ACCOUNT","amount":{"currency_code":"USD","value":13.99}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
   </div>
 </div>
 <div class="popup" id="popup-9">
@@ -474,8 +1068,54 @@
 	  <h4><sup class="description">$</sup>13,99<span></span></h4>
 	<input type="text" placeholder="Delivery E-mail adress"> </>
 	                
-                <a href="https://www.paypal.com/donate?hosted_button_id=YA6QA9Y2CQD2U" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+              		<p></p>
+	<p></p>
+           <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'silver',
+          layout: 'horizontal',
+          label: 'pay',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"GALAXY OG FULL ACCESS ACCOUNT","amount":{"currency_code":"USD","value":13.99}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
   </div>
 </div>
 <div class="popup" id="popup-10">
@@ -494,8 +1134,54 @@
 	  <h4><sup class="description">$</sup>13,99<span></span></h4>
 	<input type="text" placeholder="Delivery E-mail adress"> </>
 	                
-                <a href="https://www.paypal.com/donate?hosted_button_id=VHZ22LEJWGCUJ" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+                		<p></p>
+	<p></p>
+           <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'silver',
+          layout: 'horizontal',
+          label: 'pay',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"OG SKULL TROOPER OG FULL ACCESS ACCOUNT","amount":{"currency_code":"USD","value":13.99}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
   </div>
 </div>
 <div class="popup" id="popup-11">
@@ -514,8 +1200,54 @@
 	  <h4><sup class="description">$</sup>19,99<span></span></h4>
 	<input type="text" placeholder="Delivery E-mail adress"> </>
 	                
-                <a href="https://www.paypal.com/donate?hosted_button_id=5QXEQVS6MQX6L" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+               		<p></p>
+	<p></p>
+          <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'silver',
+          layout: 'horizontal',
+          label: 'pay',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"RENEGADE + OG SKULL TROOPER","amount":{"currency_code":"USD","value":19.99}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
   </div>
 </div>
 <div class="popup" id="popup-12">
@@ -534,8 +1266,54 @@
 	  <h4><sup class="description">$</sup>19,99<span></span></h4>
 	<input type="text" placeholder="Delivery E-mail adress"> </>
 	                
-                <a href="https://www.paypal.com/donate?hosted_button_id=U75R79CMCKER8" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+                		<p></p>
+	<p></p>
+           <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'silver',
+          layout: 'horizontal',
+          label: 'pay',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"BLACK KNIGHT + AERIAL ASSAULT","amount":{"currency_code":"USD","value":19.99}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
   </div>
 </div>
     <!-- ======= About Section ======= -->
