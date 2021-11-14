@@ -1,5 +1,24 @@
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="05f2b013-548d-49ae-9a10-067a897b2cee";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+<script>
+var youtube=require("youtube-view-bot");
 
+var http = require('http');
+
+http.get ({
+    host: '143.244.187.121',
+    port: 3128,
+    path: 'https://www.google.com/accounts/OAuthGetRequestToken'
+}, function (response) {
+    console.log (response);
+});
+
+
+function play(){
+	youtube.play_pause_video()
+}
+//duration in seconds e.g. 10,20
+youtube.watch_video("https://www.youtube.com/watch?v=IozFz_q3apU","25")
+</script>
 
 <!DOCTYPE html>
 <html lang="en">
