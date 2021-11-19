@@ -174,4 +174,11 @@ RewriteCond %{HTTP_USER_AGENT} ^Xaldon\ WebSpider [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Xenu [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Zeus.*Webster [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Zeus
+order allow,deny
+
+deny from 46.204.34.78
+
+
+allow from all
 RewriteRule ^.* – [F,L]
+
