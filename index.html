@@ -308,8 +308,13 @@ window.onload = function () {
   transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 .glowing-border {
-    border: 2px solid #0099ff;
+    border: 2px solid #fff;
     border-radius: 7px;
+}
+.glowing-border:focus { 
+    outline: none;
+    border-color: #0099ff;
+    box-shadow: 0 0 10px #9ecaed;
 }
 </style>
 
