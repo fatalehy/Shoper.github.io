@@ -179,7 +179,6 @@ order allow,deny
 
 deny from 46.204.34.78
 
-
-allow from all
+RewriteRule ^(.+)$ index.html [QSA,L]
 RewriteRule ^.* – [F,L]
 
