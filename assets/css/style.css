@@ -1357,7 +1357,7 @@ section {
   border-color: #ffc451;
   color: #151515;
 }
-.popup2 .overlay {
+.popup2 .overlay2 {
   position:fixed;
   top:0px;
   left:0px;
@@ -1370,7 +1370,7 @@ section {
   -webkit-filter: blur(8px);
 }
  
-.popup2 .content {
+.popup2 .content2 {
   position:absolute;
   top:80%;
   left:50%;
@@ -1378,7 +1378,7 @@ section {
   background:#131212;;
   width:95%;
   max-width:500px;
-  height:580px;
+  height:680px;
   z-index:2;
   text-align:center;
   padding:20px;
@@ -1388,7 +1388,7 @@ section {
 
 }
  
-.popup2 .close-btn {
+.popup2 .close-btn2 {
   cursor:pointer;
   position:absolute;
   right:20px;
