@@ -598,8 +598,8 @@ section {
   color: #fff;
 }
 #why-us .card {
-  background: #00458f;
-  border-color: #00458f;
+  background: #d9d9d9;
+  border-color: #000000;
   border-radius: 10px;
   margin: 0 15px;
   padding: 15px 0;
@@ -614,8 +614,8 @@ section {
   }
 }
 #why-us .card:hover {
-  background: #003b7a;
-  border-color: #003b7a;
+  background: #d9d9d9;
+  border-color: #d9d9d9;
 }
 #why-us .card i {
   font-size: 48px;
