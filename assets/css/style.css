@@ -1350,7 +1350,7 @@ section {
   transition: 0.5s;
   margin-top: 10px;
   border: 2px solid #000000;
-  color: #000000;
+  color: #ffffff;
 }
 .popup .cta-btn:hover {
   background: #ffc451;
