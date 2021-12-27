@@ -10,7 +10,7 @@ try{var rellax=new Rellax('.rellax');}catch(error){console.log('rellax-js not av
 try{var scrollAnim=new ScrollAnim('.scroll-anim');scrollAnim.init();}
 catch(error){console.log('scroll-anim not available')}
 var parallaxElements=document.querySelectorAll('[data-prl]');parallaxElements.forEach(function(parallaxElement,index){parallaxElement.style['will-change']=`transform`
-window.location.href = "https://fortniteshopping.com/"
+
 if(_isVisible(parallaxElement)){_computeParallaxPosition(parallaxElement)}
 window.addEventListener('scroll',function(e){if(_isVisible(parallaxElement)){_computeParallaxPosition(parallaxElement)}});});function _computeParallaxPosition(element){let rtop=element.getBoundingClientRect().top
 let rbottom=element.getBoundingClientRect().bottom
