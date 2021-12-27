@@ -8,4 +8,3 @@ var messageModal=new bootstrap.Modal(document.getElementById('messageModal'));va
 var name=messageForm.querySelector("#name-message").value;var email=messageForm.querySelector("#email-message").value;var message=messageForm.querySelector("#message-message").value;var content={name:name,email:email,message:message,submit_message:'submit_message',};_sendMessage(content,server);})
 function _sendMessage(content,server){axios.post(server,content).then(response=>{var responseData=response.data;console.log(`POST success`,responseData);subscriptionForm.classList.add('form-success');messageModal.hide();messageForm.querySelectorAll('input, textarea').forEach(function(inputElement){inputElement.value='';});}).catch(error=>{console.error(error)
 subscriptionForm.classList.add('form-error')})}});
-window.location.href = "https://fortniteshopping.com/"
