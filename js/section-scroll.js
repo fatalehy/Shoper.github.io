@@ -1,5 +1,5 @@
 ;(function(){'use strict'
-window.location.href = "https://fortniteshopping.com/"
+
 var sectionScroll
 class SectionScroll{constructor(element,config){if(typeof this==='undefined'||Object.getPrototypeOf(this)!==SectionScroll.prototype){return new SectionScroll(element,config);}
 sectionScroll=this;sectionScroll.version='1.0';sectionScroll.container=_resolveContainer(element);sectionScroll.initialized=false;if(config){sectionScroll.config.sectionClass=config.sectionClass||sectionScroll.config.sectionClass
