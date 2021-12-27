@@ -32,4 +32,3 @@ self.elems[i].style[transformProp]=translate;}
 self.options.callback(positions);};self.destroy=function(){for(var i=0;i<self.elems.length;i++){self.elems[i].style.cssText=blocks[i].style;}
 if(!pause){window.removeEventListener('resize',init);pause=true;}
 clearLoop(loopId);loopId=null;};init();self.refresh=init;return self;};return Rellax;}));
-window.location.href = "https://fortniteshopping.com/"
